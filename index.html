@@ -1,0 +1,607 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Basura Jayanidu — Software Engineer & National Badminton Umpire. Selected works, manifesto, and contact." />
+    <title>Basura Jayanidu — Vol. III / MMXXVI</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT,WONK@0,9..144,300..900,0..100,0..1;1,9..144,300..900,0..100,0..1&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@300;400;500&family=Inter+Tight:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <!-- grain overlay -->
+    <div class="grain" aria-hidden="true"></div>
+
+    <!-- precision cursor (in / out lights, badminton-coded) -->
+    <div class="prec-cursor" id="precCursor" aria-hidden="true">
+      <span class="pc-ring"></span>
+      <span class="pc-dot"></span>
+      <span class="pc-label" id="precCursorLabel">in</span>
+    </div>
+
+    <!-- ════════ MASTHEAD ════════ -->
+    <header class="masthead" id="masthead">
+      <div class="mast-row mast-top">
+        <span class="mast-issue">Vol. III &nbsp;·&nbsp; MMXXVI</span>
+        <span class="mast-title">The Basura Quarterly</span>
+        <span class="mast-loc">6° 03′ N&nbsp;·&nbsp;80° 19′ E</span>
+      </div>
+      <div class="mast-rule"></div>
+      <nav class="mast-nav" id="mastNav">
+        <a href="#manifesto"><span class="nav-num">§01</span>Manifesto</a>
+        <a href="#stack"><span class="nav-num">§02</span>Stack</a>
+        <a href="#work"><span class="nav-num">§03</span>Selected&nbsp;Work</a>
+        <a href="#court"><span class="nav-num">§04</span>The&nbsp;Court</a>
+        <a href="#press"><span class="nav-num">§05</span>Press</a>
+        <a href="#colophon"><span class="nav-num">§06</span>Contact</a>
+      </nav>
+      <button class="mast-menu" id="mastMenu" aria-label="Open menu">
+        <span></span><span></span>
+      </button>
+      <div class="mast-rule mast-rule-thin"></div>
+    </header>
+
+    <!-- ════════ HERO COVER ════════ -->
+    <section class="cover" id="cover">
+      <aside class="cover-sidebar cover-sidebar-l">
+        <p class="side-label">Cover Story</p>
+        <p class="side-num">№ 001</p>
+        <p class="side-meta">
+          Software engineer, type-setter of clean code, line judge of correct
+          shots. Filed from the southern coast.
+        </p>
+      </aside>
+
+      <div class="cover-stage">
+        <p class="cover-eyebrow">
+          <span class="eb-dot"></span> An engineer's portfolio &nbsp;/&nbsp; printed
+          for the year twenty&#8209;twenty&#8209;six
+        </p>
+
+        <h1 class="cover-name">
+          <span class="cn-line cn-roman">Basura</span>
+          <span class="cn-line cn-italic">Jayanidu<span class="cn-dot">.</span></span>
+        </h1>
+
+        <p class="cover-strap">
+          Builds full-stack software at <a href="#" class="strap-link">INNOV8 Fusion</a>.
+          Calls lines for <a href="#" class="strap-link">Sri&nbsp;Lanka Badminton</a>.
+          Same instinct, two surfaces — find the right boundary, then commit to it.
+        </p>
+
+        <div class="cover-cta">
+          <a href="#work" class="btn btn-ink">
+            <span>Read the selected work</span>
+            <span class="btn-arr">→</span>
+          </a>
+          <a href="#colophon" class="btn btn-ghost">Or write to me</a>
+        </div>
+      </div>
+
+      <aside class="cover-sidebar cover-sidebar-r">
+        <p class="side-label">In this issue</p>
+        <ol class="side-toc">
+          <li><span>01</span>Manifesto</li>
+          <li><span>02</span>Technical Spec</li>
+          <li><span>03</span>Four Projects</li>
+          <li><span>04</span>The Court</li>
+          <li><span>05</span>Letters</li>
+          <li><span>06</span>Colophon</li>
+        </ol>
+      </aside>
+
+      <div class="cover-ticker" aria-hidden="true">
+        <div class="ticker-track">
+          <span>Available for select engagements</span><span class="tk-sep">✶</span>
+          <span>.NET&nbsp;Core</span><span class="tk-sep">·</span>
+          <span>Angular</span><span class="tk-sep">·</span>
+          <span>React</span><span class="tk-sep">·</span>
+          <span>SQL&nbsp;Server</span><span class="tk-sep">·</span>
+          <span>Entity&nbsp;Framework</span><span class="tk-sep">✶</span>
+          <span>Based in Koggala, Sri&nbsp;Lanka</span><span class="tk-sep">·</span>
+          <span>UTC&nbsp;+5:30</span><span class="tk-sep">✶</span>
+          <span>Available for select engagements</span><span class="tk-sep">✶</span>
+          <span>.NET&nbsp;Core</span><span class="tk-sep">·</span>
+          <span>Angular</span><span class="tk-sep">·</span>
+          <span>React</span><span class="tk-sep">·</span>
+          <span>SQL&nbsp;Server</span><span class="tk-sep">·</span>
+          <span>Entity&nbsp;Framework</span><span class="tk-sep">✶</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ════════ §01 MANIFESTO ════════ -->
+    <section class="section section-manifesto" id="manifesto">
+      <div class="sec-head">
+        <span class="sec-num">§&nbsp;01</span>
+        <span class="sec-name">Manifesto</span>
+        <span class="sec-rule"></span>
+        <span class="sec-meta">three paragraphs &nbsp;/&nbsp; one principle</span>
+      </div>
+
+      <div class="manifesto-grid">
+        <figure class="man-portrait">
+          <div class="portrait-canvas">
+            <img
+              src="images/basu.png"
+              alt="Basura Jayanidu portrait"
+              onerror="this.style.display='none';this.parentElement.classList.add('no-img')"
+            />
+            <div class="portrait-fallback" aria-hidden="true">
+              <span class="pf-initials">BJ</span>
+              <svg class="pf-lines" viewBox="0 0 200 260" preserveAspectRatio="none">
+                <path d="M0,40 Q100,80 200,40" />
+                <path d="M0,90 Q100,130 200,90" />
+                <path d="M0,140 Q100,180 200,140" />
+                <path d="M0,190 Q100,230 200,190" />
+              </svg>
+            </div>
+          </div>
+          <figcaption>
+            Fig.&nbsp;1 — The author at his desk, somewhere south.
+            Photograph: self-portrait, 2025.
+          </figcaption>
+        </figure>
+
+        <div class="man-prose">
+          <p class="pull-quote">
+            <span class="pq-mark">“</span>The best code, like the cleanest line call, is the one that
+            ends an argument before it&nbsp;starts.<span class="pq-mark">”</span>
+          </p>
+
+          <p class="prose-lede">
+            <span class="lede-cap">I</span>'m a software engineer at
+            <em>INNOV8&nbsp;Fusion</em>, where I build full-stack HRM and SCM
+            platforms on .NET&nbsp;Core, Angular and SQL&nbsp;Server.
+            Performance, automation, and the kind of user experience that
+            doesn't make people sigh — those are the three things I'm paid
+            to fight for, and the three I actually care about.
+          </p>
+
+          <p>
+            Off the keyboard I'm a National Umpire with Sri&nbsp;Lanka
+            Badminton. It sounds unrelated. It isn't. Calling a shot in or out
+            in front of a crowd is the same muscle as shipping a refactor on a
+            Friday: read the signal, trust the judgement, commit without
+            flinching, accept the review.
+          </p>
+
+          <p>
+            Whichever side of the net I'm on, the work is the same — make a
+            precise call, keep the game moving, never make it about you.
+          </p>
+
+          <div class="man-meta">
+            <div><span>Currently</span>Sr. SE @ INNOV8&nbsp;Fusion</div>
+            <div><span>Based</span>Koggala, Sri&nbsp;Lanka</div>
+            <div><span>Open to</span>Remote &amp; consulting</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ════════ §02 STACK / TECHNICAL SPEC ════════ -->
+    <section class="section section-stack" id="stack">
+      <div class="sec-head">
+        <span class="sec-num">§&nbsp;02</span>
+        <span class="sec-name">Technical Specification</span>
+        <span class="sec-rule"></span>
+        <span class="sec-meta">build sheet &nbsp;/&nbsp; current</span>
+      </div>
+
+      <div class="spec-table" role="table">
+        <div class="spec-row spec-header" role="row">
+          <span>Layer</span><span>Tools</span><span>Years</span>
+        </div>
+
+        <div class="spec-row" role="row">
+          <span class="spec-label">Back-end</span>
+          <span class="spec-value">.NET&nbsp;Core, C#, ASP.NET, Entity&nbsp;Framework, Node.js</span>
+          <span class="spec-years">04</span>
+        </div>
+        <div class="spec-row" role="row">
+          <span class="spec-label">Front-end</span>
+          <span class="spec-value">Angular, React, TypeScript, RxJS, HTML/CSS</span>
+          <span class="spec-years">04</span>
+        </div>
+        <div class="spec-row" role="row">
+          <span class="spec-label">Data</span>
+          <span class="spec-value">SQL&nbsp;Server, T-SQL, Stored Procedures, Indexing</span>
+          <span class="spec-years">03</span>
+        </div>
+        <div class="spec-row" role="row">
+          <span class="spec-label">Cloud / Ops</span>
+          <span class="spec-value">Azure, Git, CI/CD, Docker fundamentals</span>
+          <span class="spec-years">02</span>
+        </div>
+        <div class="spec-row" role="row">
+          <span class="spec-label">Design</span>
+          <span class="spec-value">Figma, UI/UX prototyping, brand systems</span>
+          <span class="spec-years">03</span>
+        </div>
+        <div class="spec-row" role="row">
+          <span class="spec-label">Soft</span>
+          <span class="spec-value">Agile, code review, mentoring, calling lines correctly</span>
+          <span class="spec-years">∞</span>
+        </div>
+      </div>
+
+      <div class="counters">
+        <div class="counter">
+          <span class="ct-num" data-count="3">0</span><span class="ct-plus">y</span>
+          <p>Building production software</p>
+        </div>
+        <div class="counter">
+          <span class="ct-num" data-count="10">0</span><span class="ct-plus">+</span>
+          <p>Projects shipped end-to-end</p>
+        </div>
+        <div class="counter">
+          <span class="ct-num" data-count="20">0</span><span class="ct-plus">+</span>
+          <p>Clients & teammates served</p>
+        </div>
+        <div class="counter">
+          <span class="ct-num" data-count="80">0</span><span class="ct-plus">+</span>
+          <p>Matches officiated, national</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ════════ §03 SELECTED WORK ════════ -->
+    <section class="section section-work" id="work">
+      <div class="sec-head">
+        <span class="sec-num">§&nbsp;03</span>
+        <span class="sec-name">Selected Work</span>
+        <span class="sec-rule"></span>
+        <span class="sec-meta">four entries &nbsp;/&nbsp; hover to expand</span>
+      </div>
+
+      <ol class="work-list">
+
+        <li class="work-item">
+          <div class="wi-num">01</div>
+          <div class="wi-body">
+            <h3 class="wi-title">
+              <span>Luminary</span> <em>Dashboard</em>
+            </h3>
+            <p class="wi-desc">
+              Analytics SaaS for ops teams. Real-time data viz, custom
+              design system, role-based access. Cut their reporting time
+              from days to seconds.
+            </p>
+            <div class="wi-meta">
+              <span>2025</span>
+              <span>Lead engineer</span>
+              <span>Angular · .NET · SQL</span>
+              <a href="#" class="wi-link">Case study →</a>
+            </div>
+          </div>
+          <div class="wi-thumb" style="--g:linear-gradient(135deg,#FF4A1C,#C5391A);">
+            <div class="wi-thumb-grid"></div>
+            <span class="wi-thumb-label">01 / Luminary</span>
+          </div>
+        </li>
+
+        <li class="work-item">
+          <div class="wi-num">02</div>
+          <div class="wi-body">
+            <h3 class="wi-title">
+              <span>Novu</span> <em>Brand &amp; Web</em>
+            </h3>
+            <p class="wi-desc">
+              Complete visual identity and marketing site for a fintech
+              startup. Logo, type system, motion principles, full
+              guidelines — then built in Next.js.
+            </p>
+            <div class="wi-meta">
+              <span>2024</span>
+              <span>Design &amp; build</span>
+              <span>Figma · React · Vercel</span>
+              <a href="#" class="wi-link">Case study →</a>
+            </div>
+          </div>
+          <div class="wi-thumb" style="--g:linear-gradient(135deg,#1B3A5C,#0E2238);">
+            <div class="wi-thumb-grid"></div>
+            <span class="wi-thumb-label">02 / Novu</span>
+          </div>
+        </li>
+
+        <li class="work-item">
+          <div class="wi-num">03</div>
+          <div class="wi-body">
+            <h3 class="wi-title">
+              <span>Orbit</span> <em>Landing</em>
+            </h3>
+            <p class="wi-desc">
+              Scroll-driven product page with 3D CSS transforms and
+              GSAP timelines. Won a regional design award the month
+              it shipped.
+            </p>
+            <div class="wi-meta">
+              <span>2024</span>
+              <span>Motion &amp; front-end</span>
+              <span>GSAP · WebGL · CSS</span>
+              <a href="#" class="wi-link">Case study →</a>
+            </div>
+          </div>
+          <div class="wi-thumb" style="--g:linear-gradient(135deg,#2D1B69,#0D0D0D);">
+            <div class="wi-thumb-grid"></div>
+            <span class="wi-thumb-label">03 / Orbit</span>
+          </div>
+        </li>
+
+        <li class="work-item">
+          <div class="wi-num">04</div>
+          <div class="wi-body">
+            <h3 class="wi-title">
+              <span>Pulse</span> <em>E-Commerce</em>
+            </h3>
+            <p class="wi-desc">
+              End-to-end commerce platform — catalogue, custom cart,
+              Stripe payments, admin tooling. Built so a non-technical
+              owner could actually run it.
+            </p>
+            <div class="wi-meta">
+              <span>2023</span>
+              <span>Full-stack</span>
+              <span>Node · Stripe · Postgres</span>
+              <a href="#" class="wi-link">Case study →</a>
+            </div>
+          </div>
+          <div class="wi-thumb" style="--g:linear-gradient(135deg,#1F3D2B,#0F2418);">
+            <div class="wi-thumb-grid"></div>
+            <span class="wi-thumb-label">04 / Pulse</span>
+          </div>
+        </li>
+
+      </ol>
+
+      <div class="work-foot">
+        <p>Six more projects under NDA. Happy to walk through them on a call.</p>
+        <a href="#colophon" class="btn btn-ink">
+          <span>Start a project</span>
+          <span class="btn-arr">→</span>
+        </a>
+      </div>
+    </section>
+
+    <!-- ════════ §04 THE COURT ════════ -->
+    <section class="section section-court" id="court">
+      <div class="sec-head">
+        <span class="sec-num">§&nbsp;04</span>
+        <span class="sec-name">The Court</span>
+        <span class="sec-rule"></span>
+        <span class="sec-meta">a parallel practice</span>
+      </div>
+
+      <div class="court-grid">
+        <div class="court-card">
+          <div class="cc-corner cc-tl"></div>
+          <div class="cc-corner cc-tr"></div>
+          <div class="cc-corner cc-bl"></div>
+          <div class="cc-corner cc-br"></div>
+
+          <p class="cc-tag">Match Record &nbsp;·&nbsp; National&nbsp;Tier</p>
+          <div class="cc-score">
+            <div class="cc-side">
+              <p class="cc-side-label">A — Engineer</p>
+              <p class="cc-side-stat">21</p>
+            </div>
+            <div class="cc-vs">vs</div>
+            <div class="cc-side">
+              <p class="cc-side-label">B — Umpire</p>
+              <p class="cc-side-stat">21</p>
+            </div>
+          </div>
+          <p class="cc-note">
+            Two practices, one player. The scoreboard never disagrees.
+          </p>
+          <div class="cc-meta">
+            <div><span>Role</span>National Umpire — Sri&nbsp;Lanka Badminton</div>
+            <div><span>Since</span>2022</div>
+            <div><span>Matches</span>80&#43; officiated</div>
+            <div><span>Why it matters</span>Decision-making under live pressure</div>
+          </div>
+        </div>
+
+        <div class="court-prose">
+          <p>
+            On court my job is to <em>see what happened</em>, not what
+            should have happened. The shuttle either crossed the line or
+            it didn't. The call has to come out fast, clean, and
+            audible — and then the match keeps moving.
+          </p>
+          <p>
+            That's the discipline I carry into engineering. Code reviews,
+            production incidents, contested design choices — all of them
+            get easier when you've practised calling a line in front of a
+            packed gym.
+          </p>
+          <p class="court-quote">
+            <em>“In or out — but say it.”</em>
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ════════ §05 PRESS / TESTIMONIALS ════════ -->
+    <section class="section section-press" id="press">
+      <div class="sec-head">
+        <span class="sec-num">§&nbsp;05</span>
+        <span class="sec-name">Letters &amp; Press</span>
+        <span class="sec-rule"></span>
+        <span class="sec-meta">what they actually wrote</span>
+      </div>
+
+      <div class="press-slider" id="pressSlider">
+        <article class="press-card active">
+          <p class="press-quote">
+            <span class="pq-open">“</span>Basura delivered beyond
+            expectations. The attention to detail in both design and code
+            was remarkable — our conversion rate jumped 40&nbsp;% after
+            the redesign.<span class="pq-close">”</span>
+          </p>
+          <div class="press-by">
+            <span class="press-init">AK</span>
+            <div><strong>Amal Kapoor</strong><span>CEO, TechFlow</span></div>
+          </div>
+        </article>
+
+        <article class="press-card">
+          <p class="press-quote">
+            <span class="pq-open">“</span>Working with Basura felt
+            effortless. He understood our brand voice immediately and
+            translated it into an interface that our users actually love.<span class="pq-close">”</span>
+          </p>
+          <div class="press-by">
+            <span class="press-init">SM</span>
+            <div><strong>Sara Mendez</strong><span>Product Lead, Novu</span></div>
+          </div>
+        </article>
+
+        <article class="press-card">
+          <p class="press-quote">
+            <span class="pq-open">“</span>The motion work for our landing
+            page was stunning. We won a design award shortly after
+            launch. Hire him before someone else does.<span class="pq-close">”</span>
+          </p>
+          <div class="press-by">
+            <span class="press-init">RJ</span>
+            <div><strong>Ravi Jensen</strong><span>Founder, Orbit Labs</span></div>
+          </div>
+        </article>
+      </div>
+
+      <div class="press-dots" id="pressDots">
+        <button class="pd active" data-i="0" aria-label="Letter 1"></button>
+        <button class="pd" data-i="1" aria-label="Letter 2"></button>
+        <button class="pd" data-i="2" aria-label="Letter 3"></button>
+      </div>
+    </section>
+
+    <!-- ════════ §06 COLOPHON / CONTACT ════════ -->
+    <section class="section section-colophon" id="colophon">
+      <div class="sec-head">
+        <span class="sec-num">§&nbsp;06</span>
+        <span class="sec-name">Colophon &amp; Contact</span>
+        <span class="sec-rule"></span>
+        <span class="sec-meta">write &nbsp;/&nbsp; sign off</span>
+      </div>
+
+      <div class="col-grid">
+        <div class="col-left">
+          <h2 class="col-title">
+            Let's make<br /><em>something worth printing.</em>
+          </h2>
+          <p class="col-lede">
+            Got a project, a question, or just want to argue about a line
+            call? Drop a note. I usually answer within a day.
+          </p>
+
+          <div class="col-channels">
+            <a href="mailto:bjayanidu@gmail.com" class="col-channel">
+              <span class="cc-key">e-mail</span>
+              <span class="cc-val">bjayanidu@gmail.com</span>
+              <span class="cc-arr">↗</span>
+            </a>
+            <a href="https://www.linkedin.com/in/basura-jayanidu/" target="_blank" rel="noopener" class="col-channel">
+              <span class="cc-key">linkedin</span>
+              <span class="cc-val">/in/basura-jayanidu</span>
+              <span class="cc-arr">↗</span>
+            </a>
+            <a href="https://github.com/AGBJayanidu" target="_blank" rel="noopener" class="col-channel">
+              <span class="cc-key">github</span>
+              <span class="cc-val">/AGBJayanidu</span>
+              <span class="cc-arr">↗</span>
+            </a>
+            <a href="#" class="col-channel">
+              <span class="cc-key">resume</span>
+              <span class="cc-val">basura-jayanidu.pdf</span>
+              <span class="cc-arr">↓</span>
+            </a>
+          </div>
+        </div>
+
+        <form class="col-form" id="colForm" novalidate>
+          <p class="form-tag">A short note is fine</p>
+
+          <div class="ff-row">
+            <label class="ff">
+              <span>Name</span>
+              <input type="text" name="name" required placeholder="Your name" />
+            </label>
+            <label class="ff">
+              <span>E-mail</span>
+              <input type="email" name="email" required placeholder="you@domain.com" />
+            </label>
+          </div>
+
+          <label class="ff">
+            <span>About</span>
+            <select name="subject">
+              <option value="">Select a topic</option>
+              <option>A new build</option>
+              <option>A redesign / refresh</option>
+              <option>Brand &amp; identity</option>
+              <option>Just saying hi</option>
+            </select>
+          </label>
+
+          <label class="ff">
+            <span>Note</span>
+            <textarea name="message" rows="5" required placeholder="One paragraph is fine. Two is welcome."></textarea>
+          </label>
+
+          <button type="submit" class="btn btn-ink btn-full">
+            <span class="btn-txt">Send the letter</span>
+            <span class="btn-arr">→</span>
+          </button>
+
+          <p class="form-success" id="formSuccess">
+            Sent. I'll write back within a day.
+          </p>
+        </form>
+      </div>
+    </section>
+
+    <!-- ════════ FOLIO / FOOTER ════════ -->
+    <footer class="folio">
+      <div class="folio-rule"></div>
+      <div class="folio-grid">
+        <div class="folio-col">
+          <p class="folio-key">Set in</p>
+          <p>Fraunces, Instrument Serif,<br />Inter Tight &amp; JetBrains Mono.</p>
+        </div>
+        <div class="folio-col">
+          <p class="folio-key">Filed from</p>
+          <p>Koggala, Southern Province,<br />Sri&nbsp;Lanka 🇱🇰</p>
+        </div>
+        <div class="folio-col">
+          <p class="folio-key">Volume</p>
+          <p>III &nbsp;·&nbsp; MMXXVI<br />© Basura Jayanidu.</p>
+        </div>
+        <div class="folio-col folio-socials">
+          <p class="folio-key">Elsewhere</p>
+          <div class="fs-row">
+            <a href="https://www.linkedin.com/in/basura-jayanidu/" target="_blank" rel="noopener">linkedin</a>
+            <a href="https://github.com/AGBJayanidu" target="_blank" rel="noopener">github</a>
+            <a href="mailto:bjayanidu@gmail.com">e-mail</a>
+            <a href="#">x / twitter</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="folio-bot">
+        <span>End of volume — page 06 / 06</span>
+        <a href="#cover" class="folio-top">Back to cover ↑</a>
+      </div>
+    </footer>
+
+    <script src="index.js"></script>
+  </body>
+</html>
